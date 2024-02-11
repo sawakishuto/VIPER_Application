@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+// viewから値をうけてInteractorに渡す + Interactorから値を受けてviewに渡す
+final class TodoListPresenter {
+    weak var view: ToDoListViewProtocol?
+    var interactor: ToDoListInteractorInputProtocol?
+    var router: ToDoListRouterProtocol?
+}
+extension TodoListPresenter: ToDoListPresenterProtocol {
+
+    func viewWillApper() {
+        self.interactor?.fetchTodos()
+    }
+    
+    func didSelectRow(_ todoId: Int) {
+        self.router?.trunsitionToDetailView(todoId)
+    }
+    
+
+}
