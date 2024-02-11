@@ -8,6 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+    static func instantiate() -> ViewController {
+        let storybord = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let view = storybord.instantiateViewController(withIdentifier: "ViewController") as? ViewController
+        return view ?? ViewController()
+    }
 //    protocol越しにpresenterのメソッドを呼び出せる
     var presenter: ToDoListPresenterProtocol?
     var viewDatas = [TodoListViewData]() {
