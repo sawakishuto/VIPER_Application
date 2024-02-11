@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol ToDoListViewProtocol {
+protocol ToDoListViewProtocol: AnyObject {
     var presenter: ToDoListPresenterProtocol? { get set}
     func showToDos(_ todos: [TodoListViewData])
 }

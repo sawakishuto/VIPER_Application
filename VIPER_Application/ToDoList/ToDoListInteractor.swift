@@ -17,6 +17,4 @@ extension ToDoListInteractor: ToDoListInteractorInputProtocol {
        let todos = TodoStore.shared.todos
         self.presenter?.didFetchedTodos(todos)
     }
-    
-
 }
