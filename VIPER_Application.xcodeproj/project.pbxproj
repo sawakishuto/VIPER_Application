@@ -19,6 +19,10 @@
 		08537B7C2B7916E000F42C9A /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B7B2B7916E000F42C9A /* TodoData.swift */; };
 		08537B7E2B7917BD00F42C9A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B7D2B7917BD00F42C9A /* Protocols.swift */; };
 		08537B812B79201F00F42C9A /* TodoListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B802B79201F00F42C9A /* TodoListViewData.swift */; };
+		08537B862B79241A00F42C9A /* ToDoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B852B79241A00F42C9A /* ToDoListInteractor.swift */; };
+		08537B882B79254C00F42C9A /* ToDoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B872B79254C00F42C9A /* ToDoStore.swift */; };
+		08537B8A2B79279D00F42C9A /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B892B79279D00F42C9A /* TodoListPresenter.swift */; };
+		08537B8C2B792F3B00F42C9A /* TableListviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B8B2B792F3B00F42C9A /* TableListviewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		08537B7B2B7916E000F42C9A /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 		08537B7D2B7917BD00F42C9A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		08537B802B79201F00F42C9A /* TodoListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewData.swift; sourceTree = "<group>"; };
+		08537B852B79241A00F42C9A /* ToDoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListInteractor.swift; sourceTree = "<group>"; };
+		08537B872B79254C00F42C9A /* ToDoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoStore.swift; sourceTree = "<group>"; };
+		08537B892B79279D00F42C9A /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
+		08537B8B2B792F3B00F42C9A /* TableListviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListviewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,7 @@
 			children = (
 				08537B4B2B79068400F42C9A /* AppDelegate.swift */,
 				08537B4D2B79068400F42C9A /* SceneDelegate.swift */,
+				08537B872B79254C00F42C9A /* ToDoStore.swift */,
 				08537B832B7923A800F42C9A /* ToDoList */,
 				08537B542B79068700F42C9A /* Assets.xcassets */,
 				08537B562B79068700F42C9A /* LaunchScreen.storyboard */,
@@ -152,12 +161,23 @@
 		08537B832B7923A800F42C9A /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				08537B512B79068400F42C9A /* Main.storyboard */,
-				08537B4F2B79068400F42C9A /* ViewController.swift */,
+				08537B842B7923F400F42C9A /* View */,
 				08537B7F2B791FFE00F42C9A /* Entities */,
 				08537B822B79210300F42C9A /* Protocols */,
+				08537B852B79241A00F42C9A /* ToDoListInteractor.swift */,
+				08537B892B79279D00F42C9A /* TodoListPresenter.swift */,
 			);
 			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		08537B842B7923F400F42C9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08537B512B79068400F42C9A /* Main.storyboard */,
+				08537B4F2B79068400F42C9A /* ViewController.swift */,
+				08537B8B2B792F3B00F42C9A /* TableListviewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,9 +312,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				08537B812B79201F00F42C9A /* TodoListViewData.swift in Sources */,
+				08537B8C2B792F3B00F42C9A /* TableListviewCell.swift in Sources */,
 				08537B7E2B7917BD00F42C9A /* Protocols.swift in Sources */,
+				08537B862B79241A00F42C9A /* ToDoListInteractor.swift in Sources */,
+				08537B8A2B79279D00F42C9A /* TodoListPresenter.swift in Sources */,
 				08537B7C2B7916E000F42C9A /* TodoData.swift in Sources */,
 				08537B502B79068400F42C9A /* ViewController.swift in Sources */,
+				08537B882B79254C00F42C9A /* ToDoStore.swift in Sources */,
 				08537B4C2B79068400F42C9A /* AppDelegate.swift in Sources */,
 				08537B4E2B79068400F42C9A /* SceneDelegate.swift in Sources */,
 			);
@@ -478,6 +502,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5285K4Z956;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VIPER_Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -505,6 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5285K4Z956;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VIPER_Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
