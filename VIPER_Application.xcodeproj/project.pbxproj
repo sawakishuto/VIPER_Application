@@ -107,10 +107,7 @@
 			children = (
 				08537B4B2B79068400F42C9A /* AppDelegate.swift */,
 				08537B4D2B79068400F42C9A /* SceneDelegate.swift */,
-				08537B4F2B79068400F42C9A /* ViewController.swift */,
-				08537B7F2B791FFE00F42C9A /* Entities */,
-				08537B822B79210300F42C9A /* Protocols */,
-				08537B512B79068400F42C9A /* Main.storyboard */,
+				08537B832B7923A800F42C9A /* ToDoList */,
 				08537B542B79068700F42C9A /* Assets.xcassets */,
 				08537B562B79068700F42C9A /* LaunchScreen.storyboard */,
 				08537B592B79068700F42C9A /* Info.plist */,
@@ -150,6 +147,17 @@
 				08537B7D2B7917BD00F42C9A /* Protocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		08537B832B7923A800F42C9A /* ToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				08537B512B79068400F42C9A /* Main.storyboard */,
+				08537B4F2B79068400F42C9A /* ViewController.swift */,
+				08537B7F2B791FFE00F42C9A /* Entities */,
+				08537B822B79210300F42C9A /* Protocols */,
+			);
+			path = ToDoList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
