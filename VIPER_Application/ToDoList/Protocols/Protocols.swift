@@ -30,7 +30,7 @@ protocol ToDoListInteractorOutputProtocol: AnyObject {
     func didFetchedTodos(_ todos: [ToDoModel])
 }
 protocol ToDoListRouterProtocol: AnyObject {
-    func assenbleModules() -> UIViewController
+    static func assenbleModules() -> UIViewController
     var view: ToDoListViewProtocol? {get set}
     func trunsitionToDetailView(_ todoId: Int)
 }
