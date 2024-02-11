@@ -12,8 +12,8 @@ protocol ToDoListViewProtocol {
     var presenter: ToDoListPresenterProtocol? { get set}
     func showToDos(_ todos: [TodoListViewData])
 }
-
-protocol ToDoListPresenterProtocol {
+//　弱参照するためにAnyObjectを追加する
+protocol ToDoListPresenterProtocol: AnyObject {
     var view: ToDoListViewProtocol? {get set}
     var interactor: ToDoListInteractorInputProtocol? {get set}
     var router: ToDoListRouterProtocol? {get set}
@@ -21,15 +21,15 @@ protocol ToDoListPresenterProtocol {
     func didSelectRow(_ todoId: Int)
 }
 //　presenterから処理をもらう
-protocol ToDoListInteractorInputProtocol {
+protocol ToDoListInteractorInputProtocol: AnyObject {
     var presenter: ToDoListInteractorOutputProtocol? {get set}
     func fetchTodos()
 }
 // 処理をpresenterに渡す
-protocol ToDoListInteractorOutputProtocol {
+protocol ToDoListInteractorOutputProtocol: AnyObject {
     func didFetchedTodos(_ todos: [ToDoModel])
 }
-protocol ToDoListRouterProtocol {
+protocol ToDoListRouterProtocol: AnyObject {
     func assenbleModules() -> UIViewController
     var view: ToDoListViewProtocol? {get set}
     func trunsitionToDetailView(_ todoId: Int)
