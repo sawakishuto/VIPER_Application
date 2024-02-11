@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="95" width="393" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KV4-Hz-4Oc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="KV4-Hz-4Oc" customClass="TableListviewCell" customModule="VIPER_Application" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KV4-Hz-4Oc" id="AFZ-5A-JIk">
@@ -68,6 +68,10 @@
                                                 <constraint firstItem="EV8-jF-L42" firstAttribute="top" secondItem="AFZ-5A-JIk" secondAttribute="topMargin" constant="2" id="rhe-Xi-k2U"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deadLineLabel" destination="EV8-jF-L42" id="MMO-27-Qkn"/>
+                                            <outlet property="titleLabel" destination="fus-Ud-RqL" id="8b4-IP-LrR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -85,9 +89,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ToDoTableView" destination="YPH-HK-Jim" id="w7J-ZV-4mT"/>
-                        <outlet property="deadLine" destination="EV8-jF-L42" id="zq0-O4-X38"/>
-                        <outlet property="title" destination="fus-Ud-RqL" id="iqx-03-Ysu"/>
+                        <outlet property="ToDoTableView" destination="YPH-HK-Jim" id="Hd1-xB-6Js"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
