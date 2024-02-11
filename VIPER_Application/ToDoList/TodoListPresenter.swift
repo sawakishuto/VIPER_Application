@@ -13,6 +13,7 @@ final class TodoListPresenter {
     var interactor: ToDoListInteractorInputProtocol?
     var router: ToDoListRouterProtocol?
 }
+//　view -> presenter -> ... の処理
 extension TodoListPresenter: ToDoListPresenterProtocol {
 
     func viewWillApper() {
@@ -22,6 +23,16 @@ extension TodoListPresenter: ToDoListPresenterProtocol {
     func didSelectRow(_ todoId: Int) {
         self.router?.trunsitionToDetailView(todoId)
     }
+}
+// ... -> presenter -> view　の処理
+extension TodoListPresenter: ToDoListInteractorOutputProtocol {
+    func didFetchedTodos(_ todos: [ToDoModel]) {
+        var viewDatas = [TodoListViewData]()
+        todos.forEach { todo in
+            let viewData = TodoListViewData(todoId: todo.id, title: todo.title, deadLine: todo.deadLine)
+            viewDatas.append(viewData)
+        }
+        self.view?.showToDos(viewDatas)
+    }
     
-
 }
