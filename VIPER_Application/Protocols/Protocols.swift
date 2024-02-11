@@ -20,11 +20,12 @@ protocol ToDoListPresenterProtocol {
     func viewWillApper()
     func didSelectRow(_ todoId: Int)
 }
+//　presenterから処理をもらう
 protocol ToDoListInteractorInputProtocol {
     var presenter: ToDoListInteractorOutputProtocol? {get set}
     func fetchTodos()
 }
-
+// 処理をpresenterに渡す
 protocol ToDoListInteractorOutputProtocol {
     func didFetchedTodos(_ todos: [ToDoModel])
 }
