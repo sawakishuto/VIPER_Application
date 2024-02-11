@@ -6,6 +6,8 @@
 //
 
 import Foundation
+//　基本: 通知をお願いするためのprotocolは weak varで定義,
+//       通知を受けて実際にそれを実行するときは<: protocol名>で定義し実装
 
 // viewから値をうけてInteractorに渡す + Interactorから値を受けてviewに渡す
 final class TodoListPresenter {
@@ -17,6 +19,7 @@ final class TodoListPresenter {
 extension TodoListPresenter: ToDoListPresenterProtocol {
 
     func viewWillApper() {
+        print("Start viewWillApper")
         self.interactor?.fetchTodos()
     }
     

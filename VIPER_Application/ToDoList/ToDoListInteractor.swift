@@ -14,7 +14,9 @@ final class ToDoListInteractor {
 }
 extension ToDoListInteractor: ToDoListInteractorInputProtocol {
     func fetchTodos() {
+        print("呼び出し開始")
        let todos = TodoStore.shared.todos
+        print(todos.count)
         self.presenter?.didFetchedTodos(todos)
     }
 }
