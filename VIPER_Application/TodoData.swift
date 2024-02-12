@@ -15,4 +15,6 @@ struct ToDoModel: Identifiable {
     let deadLine: Date
     let createdOn: Date
     let updateOn: Date
+    static let `default` = ToDoModel(id: 0, title: "", detail: "", isCompleted: false, deadLine: Date(), createdOn: Date(), updateOn: Date())
+
 }
