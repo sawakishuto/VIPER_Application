@@ -28,6 +28,8 @@
 		08537B932B79A58700F42C9A /* TodoDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B922B79A58700F42C9A /* TodoDetailProtocols.swift */; };
 		08537B952B79A59A00F42C9A /* TodoDetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08537B942B79A59A00F42C9A /* TodoDetailView.storyboard */; };
 		08537B982B79A72800F42C9A /* TodoDetailViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B972B79A72800F42C9A /* TodoDetailViewData.swift */; };
+		08537B9F2B79AC5F00F42C9A /* TodoDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B9E2B79AC5F00F42C9A /* TodoDetailInteractor.swift */; };
+		08537BA22B79B15D00F42C9A /* TodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BA12B79B15D00F42C9A /* TodoDetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		08537B922B79A58700F42C9A /* TodoDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailProtocols.swift; sourceTree = "<group>"; };
 		08537B942B79A59A00F42C9A /* TodoDetailView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TodoDetailView.storyboard; sourceTree = "<group>"; };
 		08537B972B79A72800F42C9A /* TodoDetailViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailViewData.swift; sourceTree = "<group>"; };
+		08537B9E2B79AC5F00F42C9A /* TodoDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailInteractor.swift; sourceTree = "<group>"; };
+		08537BA12B79B15D00F42C9A /* TodoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 				08537B4B2B79068400F42C9A /* AppDelegate.swift */,
 				08537B4D2B79068400F42C9A /* SceneDelegate.swift */,
 				08537B872B79254C00F42C9A /* ToDoStore.swift */,
+				08537B7B2B7916E000F42C9A /* TodoData.swift */,
 				08537B912B79A53F00F42C9A /* TodoDetail */,
 				08537B832B7923A800F42C9A /* ToDoList */,
 				08537B542B79068700F42C9A /* Assets.xcassets */,
@@ -155,7 +160,6 @@
 		08537B7F2B791FFE00F42C9A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				08537B7B2B7916E000F42C9A /* TodoData.swift */,
 				08537B802B79201F00F42C9A /* TodoListViewData.swift */,
 			);
 			path = Entities;
@@ -175,9 +179,9 @@
 				08537B842B7923F400F42C9A /* View */,
 				08537B7F2B791FFE00F42C9A /* Entities */,
 				08537B822B79210300F42C9A /* Protocols */,
-				08537B852B79241A00F42C9A /* ToDoListInteractor.swift */,
-				08537B892B79279D00F42C9A /* TodoListPresenter.swift */,
-				08537B8D2B79399E00F42C9A /* TodoListRouter.swift */,
+				08537B992B79AC0900F42C9A /* Interactor */,
+				08537B9A2B79AC1400F42C9A /* Presenter */,
+				08537B9B2B79AC1E00F42C9A /* Router */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -196,8 +200,10 @@
 			isa = PBXGroup;
 			children = (
 				08537B962B79A59E00F42C9A /* View */,
-				08537B922B79A58700F42C9A /* TodoDetailProtocols.swift */,
-				08537B972B79A72800F42C9A /* TodoDetailViewData.swift */,
+				08537B9C2B79AC2900F42C9A /* Protocols */,
+				08537B9D2B79AC3400F42C9A /* Entitis */,
+				08537BA02B79AC6300F42C9A /* Interactor */,
+				08537BA32B79B97C00F42C9A /* Presenter */,
 			);
 			path = TodoDetail;
 			sourceTree = "<group>";
@@ -209,6 +215,62 @@
 				08537B942B79A59A00F42C9A /* TodoDetailView.storyboard */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		08537B992B79AC0900F42C9A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				08537B852B79241A00F42C9A /* ToDoListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		08537B9A2B79AC1400F42C9A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				08537B892B79279D00F42C9A /* TodoListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		08537B9B2B79AC1E00F42C9A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				08537B8D2B79399E00F42C9A /* TodoListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		08537B9C2B79AC2900F42C9A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				08537B922B79A58700F42C9A /* TodoDetailProtocols.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		08537B9D2B79AC3400F42C9A /* Entitis */ = {
+			isa = PBXGroup;
+			children = (
+				08537B972B79A72800F42C9A /* TodoDetailViewData.swift */,
+			);
+			name = Entitis;
+			sourceTree = "<group>";
+		};
+		08537BA02B79AC6300F42C9A /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				08537B9E2B79AC5F00F42C9A /* TodoDetailInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		08537BA32B79B97C00F42C9A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				08537BA12B79B15D00F42C9A /* TodoDetailPresenter.swift */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +416,8 @@
 				08537B932B79A58700F42C9A /* TodoDetailProtocols.swift in Sources */,
 				08537B882B79254C00F42C9A /* ToDoStore.swift in Sources */,
 				08537B8E2B79399E00F42C9A /* TodoListRouter.swift in Sources */,
+				08537B9F2B79AC5F00F42C9A /* TodoDetailInteractor.swift in Sources */,
+				08537BA22B79B15D00F42C9A /* TodoDetailPresenter.swift in Sources */,
 				08537B982B79A72800F42C9A /* TodoDetailViewData.swift in Sources */,
 				08537B4C2B79068400F42C9A /* AppDelegate.swift in Sources */,
 				08537B4E2B79068400F42C9A /* SceneDelegate.swift in Sources */,
