@@ -24,7 +24,7 @@ extension TodoListPresenter: ToDoListPresenterProtocol {
     }
     
     func didSelectRow(_ todoId: Int) {
-        self.router?.trunsitionToDetailView(todoId)
+        self.router?.transitionTodoDetail(todoId)
     }
 }
 // ... -> presenter -> view　の処理

@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-protocol ToDoListViewProtocol: AnyObject {
+protocol ToDoListViewProtocol: TransitionProtocol {
     var presenter: ToDoListPresenterProtocol? { get set}
     func showToDos(_ todos: [TodoListViewData])
+
 }
 //　弱参照するためにAnyObjectを追加する
 protocol ToDoListPresenterProtocol: AnyObject {
@@ -32,5 +33,5 @@ protocol ToDoListInteractorOutputProtocol: AnyObject {
 protocol ToDoListRouterProtocol: AnyObject {
     static func assenbleModules() -> UIViewController
     var view: ToDoListViewProtocol? {get set}
-    func trunsitionToDetailView(_ todoId: Int)
+    func transitionTodoDetail(_ todoId: Int)
 }
