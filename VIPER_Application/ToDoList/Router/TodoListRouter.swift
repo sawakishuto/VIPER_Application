@@ -27,8 +27,10 @@ extension TodoListRouter: ToDoListRouterProtocol {
 
         return view
     }
-    func trunsitionToDetailView(_ todoId: Int) {
+
+    func transitionTodoDetail(_ todoId: Int) {
+        let detailView = TodoDetailRouter().assembleModules(todoId)
+        self.view?.pushViewController(detailView, animated: true)
     }
-    
 
 }
