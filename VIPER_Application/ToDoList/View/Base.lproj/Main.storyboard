@@ -27,10 +27,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="KV4-Hz-4Oc" customClass="TableListviewCell" customModule="VIPER_Application" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="393" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KV4-Hz-4Oc" id="AFZ-5A-JIk">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fus-Ud-RqL">
@@ -45,13 +45,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021/1/1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EV8-jF-L42">
-                                                    <rect key="frame" x="320" y="13" width="52.666666666666686" height="17"/>
+                                                    <rect key="frame" x="279.33333333333331" y="12.999999999999998" width="60" height="17.333333333333329"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="u7A-fh-W67"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="期限:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f5-WY-POM">
-                                                    <rect key="frame" x="272.66666666666669" y="11" width="39.333333333333314" height="21"/>
+                                                    <rect key="frame" x="231.33333333333334" y="11" width="39.333333333333343" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -59,10 +62,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="fus-Ud-RqL" firstAttribute="leading" secondItem="AFZ-5A-JIk" secondAttribute="leading" constant="20" symbolic="YES" id="6aq-hk-A7p"/>
-                                                <constraint firstItem="EV8-jF-L42" firstAttribute="leading" secondItem="9f5-WY-POM" secondAttribute="trailing" constant="8" symbolic="YES" id="9HV-5d-aCC"/>
+                                                <constraint firstItem="EV8-jF-L42" firstAttribute="top" secondItem="AFZ-5A-JIk" secondAttribute="topMargin" constant="2" id="7UU-tL-br7"/>
                                                 <constraint firstItem="9f5-WY-POM" firstAttribute="top" secondItem="AFZ-5A-JIk" secondAttribute="topMargin" id="BHp-hY-EmX"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="EV8-jF-L42" secondAttribute="trailing" constant="0.33000000000000002" id="Pyk-s0-LWi"/>
-                                                <constraint firstItem="EV8-jF-L42" firstAttribute="centerX" secondItem="AFZ-5A-JIk" secondAttribute="centerX" constant="149.83333333333331" id="X3e-P3-dVz"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="EV8-jF-L42" secondAttribute="bottom" constant="2.6699999999999999" id="Qyw-Ib-ifD"/>
+                                                <constraint firstItem="EV8-jF-L42" firstAttribute="leading" secondItem="9f5-WY-POM" secondAttribute="trailing" constant="8.6699999999999999" id="Raf-GK-FNh"/>
+                                                <constraint firstItem="EV8-jF-L42" firstAttribute="centerX" secondItem="AFZ-5A-JIk" secondAttribute="centerX" constant="112.83333333333337" id="X3e-P3-dVz"/>
                                                 <constraint firstItem="fus-Ud-RqL" firstAttribute="top" secondItem="AFZ-5A-JIk" secondAttribute="top" constant="8" id="X4p-nN-NVY"/>
                                                 <constraint firstItem="EV8-jF-L42" firstAttribute="top" secondItem="AFZ-5A-JIk" secondAttribute="topMargin" constant="2" id="qeV-cc-W2p"/>
                                                 <constraint firstItem="EV8-jF-L42" firstAttribute="top" secondItem="AFZ-5A-JIk" secondAttribute="topMargin" constant="2" id="rhe-Xi-k2U"/>
