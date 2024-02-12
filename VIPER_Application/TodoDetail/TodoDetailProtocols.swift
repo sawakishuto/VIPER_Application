@@ -21,8 +21,9 @@ protocol TodoDetailPresenterProtocol: AnyObject {
 }
 // 通知を受け取ってinteractorで処理するためのprotocol view -> presenter -> interactor
 protocol TodoDetailInteractorInput {
+//     ↓ここでpresenterを繋いで処理完了通知presenterはこれに準拠して実装
     var presenter: TodoDetailInteractorOutput? {get set}
-    func fetchTodo(_ todoId: Int)
+    func fetchTodoDetail(_ todoId: Int)
 }
 // 通知を渡すためのprotocol  interactor -> presenter -> view
 protocol TodoDetailInteractorOutput {
