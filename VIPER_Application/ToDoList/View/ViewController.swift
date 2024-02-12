@@ -49,6 +49,7 @@ extension ViewController: ToDoListViewProtocol {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let todoId = self.viewDatas[indexPath.row].todoId
+        print(todoId)
         self.presenter?.didSelectRow(todoId)
     }
 }
