@@ -11,7 +11,7 @@
         <!--Todo Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TodoDetailViewController" customModule="VIPER_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TodoDetailView" id="Y6W-OH-hqX" customClass="TodoDetailViewController" customModule="VIPER_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                     <navigationItem title="カレーの買い出し" id="7kB-wA-caH">
                                         <barButtonItem key="leftBarButtonItem" title="戻る" id="gK5-uR-f2C">
                                             <connections>
-                                                <action selector="BackButtonTapped:" destination="PiD-gm-3Xc" id="ZPS-Q8-BHe"/>
+                                                <action selector="TappedBackView:" destination="Y6W-OH-hqX" id="wWy-bs-JRJ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -81,7 +81,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="やっぱ未完了"/>
                                 <connections>
-                                    <action selector="isNotCompleteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C6Z-UA-eWG"/>
+                                    <action selector="isNotCompleteButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cQJ-ZO-7eU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgw-6D-Ggt">
@@ -92,6 +92,15 @@
                                     <action selector="isCompleteButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="d6b-dP-dWy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="完了" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myJ-RW-ImQ">
+                                <rect key="frame" x="146.66666666666666" y="631" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="V0M-fG-Eax"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -104,6 +113,7 @@
                             <constraint firstItem="fgw-6D-Ggt" firstAttribute="top" secondItem="yDV-na-X9p" secondAttribute="bottom" constant="45" id="FaZ-md-gZc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fgw-6D-Ggt" secondAttribute="trailing" constant="57" id="IHi-5j-KMd"/>
                             <constraint firstItem="q29-Ee-b2A" firstAttribute="top" secondItem="phv-EG-A1e" secondAttribute="bottom" constant="77" id="Itn-Ib-3kN"/>
+                            <constraint firstItem="myJ-RW-ImQ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="JNH-DG-bZu"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kca-gg-3Sg" secondAttribute="trailing" constant="30" id="K8o-4U-Nlk"/>
                             <constraint firstItem="kca-gg-3Sg" firstAttribute="top" secondItem="phv-EG-A1e" secondAttribute="bottom" constant="15" id="OOe-gy-d8v"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SFR-NA-fjm" secondAttribute="trailing" constant="80" id="Q79-bd-bXe"/>
@@ -115,6 +125,7 @@
                             <constraint firstItem="LgA-TT-ZUj" firstAttribute="top" secondItem="phv-EG-A1e" secondAttribute="bottom" constant="15" id="enh-8f-C68"/>
                             <constraint firstItem="yDV-na-X9p" firstAttribute="top" secondItem="iuV-fJ-yfb" secondAttribute="bottom" constant="48" id="gNa-n5-tFA"/>
                             <constraint firstItem="9Ot-K6-X6s" firstAttribute="leading" secondItem="iuV-fJ-yfb" secondAttribute="trailing" constant="20" id="jdt-j9-AQL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="myJ-RW-ImQ" secondAttribute="bottom" constant="157" id="nxZ-mH-PuM"/>
                             <constraint firstItem="yDV-na-X9p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="oin-kF-og1"/>
                             <constraint firstItem="phv-EG-A1e" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="ps4-to-UeB"/>
                             <constraint firstItem="r6s-bT-NcQ" firstAttribute="top" secondItem="yDV-na-X9p" secondAttribute="bottom" constant="45" id="rlH-Oc-vlS"/>
@@ -124,13 +135,15 @@
                     </view>
                     <connections>
                         <outlet property="BackButton" destination="gK5-uR-f2C" id="Oac-YG-VdT"/>
+                        <outlet property="DetailNavigationBar" destination="phv-EG-A1e" id="Xep-hJ-VfL"/>
                         <outlet property="deadLineLabel" destination="kca-gg-3Sg" id="7Ph-wk-R5H"/>
+                        <outlet property="detailNavigationTitle" destination="7kB-wA-caH" id="30D-UH-CCV"/>
                         <outlet property="endTimeLabel" destination="9Ot-K6-X6s" id="EFZ-RG-Yi4"/>
+                        <outlet property="isCompleteLabel" destination="myJ-RW-ImQ" id="Bx9-B5-We9"/>
                         <outlet property="todoDetailTextView" destination="yDV-na-X9p" id="b9J-Xl-alN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="PiD-gm-3Xc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5.343511450381679" y="-2.1126760563380285"/>
         </scene>
