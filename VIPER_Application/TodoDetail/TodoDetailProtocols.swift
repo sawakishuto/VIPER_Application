@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol TodoDetailViewProtocol: AnyObject {
+protocol TodoDetailViewProtocol: TransitionProtocol {
     var presenter: TodoDetailPresenterProtocol? {get set}
     func showDetail(_ todo: TodoDetailViewData)
 }
