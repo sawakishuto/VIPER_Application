@@ -16,7 +16,6 @@ protocol TodoDetailPresenterProtocol: AnyObject {
     var view: TodoDetailViewProtocol? {get set}
     var interactor: TodoDetailInteractorInput? {get set}
     var router: TodoDetailRouterProtocol? {get set}
-
     func viewWillApper()
 }
 // 通知を受け取ってinteractorで処理するためのprotocol view -> presenter -> interactor

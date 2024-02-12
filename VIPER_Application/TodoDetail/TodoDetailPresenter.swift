@@ -15,7 +15,8 @@ final class TodoDetailPresenter {
 }
 extension TodoDetailPresenter: TodoDetailInteractorOutput {
     func didFetchedTodo(_ todo: ToDoModel) {
-        var todoDetail: TodoDetailViewData = TodoDetailViewData(todoId: todo.id, title: todo.title, detail: todo.detail, isCompleted: todo.isCompleted, deadLine: todo.deadLine)
+        print(todoId)
+        let todoDetail: TodoDetailViewData = TodoDetailViewData(todoId: todo.id, title: todo.title, detail: todo.detail, isCompleted: todo.isCompleted, deadLine: todo.deadLine)
         self.view?.showDetail(todoDetail)
     }
 }
