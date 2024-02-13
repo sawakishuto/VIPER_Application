@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="VIPER_Application" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="VIPER_Application" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,24 +44,50 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUx-S2-F6B">
+                                <rect key="frame" x="159" y="634" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Button">
+                                    <color key="baseForegroundColor" red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="isLoginStartButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2BU-Ud-qaS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9j-Vp-g4n">
+                                <rect key="frame" x="158.66666666666666" y="715" width="76" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
                             <constraint firstItem="dRj-m1-kmZ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="132" id="4eh-ca-til"/>
+                            <constraint firstItem="Uo7-eC-OTk" firstAttribute="top" secondItem="fyH-bO-Ssa" secondAttribute="bottom" constant="8" symbolic="YES" id="BgK-p1-8pU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Uo7-eC-OTk" secondAttribute="trailing" constant="82" id="CrT-1G-jyd"/>
                             <constraint firstItem="eKe-fW-jH8" firstAttribute="top" secondItem="vWq-FO-Mcz" secondAttribute="bottom" constant="8" symbolic="YES" id="Gv5-S3-bKd"/>
                             <constraint firstItem="dRj-m1-kmZ" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Hm3-I7-Kzl"/>
                             <constraint firstItem="vWq-FO-Mcz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="82" id="K0s-5f-his"/>
+                            <constraint firstItem="I9j-Vp-g4n" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KSu-AP-kwf"/>
                             <constraint firstItem="eKe-fW-jH8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="82" id="Kj7-Xz-sPx"/>
+                            <constraint firstItem="I9j-Vp-g4n" firstAttribute="top" secondItem="fUx-S2-F6B" secondAttribute="bottom" constant="46" id="PXZ-Pc-jAt"/>
                             <constraint firstItem="Uo7-eC-OTk" firstAttribute="top" secondItem="fyH-bO-Ssa" secondAttribute="bottom" constant="8" symbolic="YES" id="UVt-if-egs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="eKe-fW-jH8" secondAttribute="trailing" constant="82" id="X96-HI-Tdf"/>
                             <constraint firstItem="Uo7-eC-OTk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="82" id="a1V-Zh-KK2"/>
                             <constraint firstItem="fyH-bO-Ssa" firstAttribute="top" secondItem="eKe-fW-jH8" secondAttribute="bottom" constant="55" id="dik-Ok-371"/>
+                            <constraint firstItem="fUx-S2-F6B" firstAttribute="top" secondItem="Uo7-eC-OTk" secondAttribute="bottom" constant="57" id="heG-n1-xfH"/>
                             <constraint firstItem="fyH-bO-Ssa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="82" id="qeB-Vg-feF"/>
+                            <constraint firstItem="fUx-S2-F6B" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qsx-VI-Skl"/>
                             <constraint firstItem="vWq-FO-Mcz" firstAttribute="top" secondItem="dRj-m1-kmZ" secondAttribute="bottom" constant="151" id="qwt-88-oge"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordInputField" destination="Uo7-eC-OTk" id="Xrc-1c-dCH"/>
+                        <outlet property="userNameInputField" destination="eKe-fW-jH8" id="12P-we-pMa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
