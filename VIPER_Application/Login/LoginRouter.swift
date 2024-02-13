@@ -12,7 +12,7 @@ final class LoginRouter {
     weak var view: LoginViewControllerProtocol?
 }
 extension LoginRouter: LoginRouterProtocol {
-    func assembleModules() -> UIViewController {
+   static func assembleModules() -> UIViewController {
         let view = LoginViewController.instatiate()
         let presenter = LoginPresenter()
         let interactor = LoginInteractor()
