@@ -29,7 +29,7 @@ protocol LoginInteractorOutputProtocol: AnyObject {
 }
 protocol LoginRouterProtocol:AnyObject {
     var view: LoginViewControllerProtocol? {get set}
-    func assembleModules() -> UIViewController
+    static func assembleModules() -> UIViewController
     func transitionTodoList()
 }
 
