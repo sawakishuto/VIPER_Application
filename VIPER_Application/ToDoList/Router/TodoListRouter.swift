@@ -13,7 +13,7 @@ final class TodoListRouter {
 }
 extension TodoListRouter: ToDoListRouterProtocol {
 
-    static func assenbleModules() -> UIViewController {
+    func assenbleModules() -> UIViewController {
         let view = ViewController.instantiate()
         let presenter = TodoListPresenter()
         let interactor = ToDoListInteractor()
