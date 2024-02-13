@@ -6,3 +6,30 @@
 //
 
 import Foundation
+import UIKit
+
+final class LoginRouter {
+    weak var view: LoginViewControllerProtocol?
+}
+extension LoginRouter: LoginRouterProtocol {
+    func assembleModules() -> UIViewController {
+        let view = LoginViewController.instatiate()
+        let presenter = LoginPresenter()
+        let interactor = LoginInteractor()
+        let router = LoginRouter()
+        view.presenter = presenter
+        presenter.interactor = interactor
+        presenter.router = router
+        presenter.view = view
+        interactor.presenter = presenter
+        router.view = view
+        return view
+    }
+    
+    func transitionTodoList() {
+        let view = TodoListRouter().assenbleModules()
+        self.view?.pushViewController(view, animated: true)
+    }
+    
+
+}
