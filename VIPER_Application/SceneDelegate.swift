@@ -22,8 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         let navigationController = UINavigationController()
-        let todoListViewController = TodoListRouter.assenbleModules()
-        navigationController.viewControllers = [todoListViewController]
+        let loginViewController = LoginRouter.assembleModules()
+        navigationController.viewControllers = [loginViewController]
         window.rootViewController = navigationController
     }
     }
