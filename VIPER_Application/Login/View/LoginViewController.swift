@@ -39,7 +39,7 @@ extension LoginViewController: LoginViewControllerProtocol {
         self.loginErrorMessageLabel?.text = message
         self.loginErrorMessageLabel?.textColor = .red
         self.userNameInputField?.backgroundColor = .lightGray
-        self.passwordInputField?.textColor = .lightGray
+        self.passwordInputField?.backgroundColor = .lightGray
         self.userNameInputField?.text = ""
         self.passwordInputField?.text = ""
     }
