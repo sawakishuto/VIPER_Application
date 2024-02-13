@@ -8,7 +8,7 @@
 import Foundation
 
 struct LoginUserData {
-    let id: Int
+    let id: String = UUID().uuidString
     let userName: String
     let password: Int
 }
