@@ -15,11 +15,11 @@ extension LoginInteractor: LoginInteractorInputProtocol {
     func comformLoginInformation(userName: String, password: Int) {
         let userDatas = ResistedUserDataStore.shared.LoginUser
         for userData in userDatas {
-            if userData.userName == userName && userData.password == password {
-                self.presenter?.confirmedUserLoginInfomation(result: .success(userData))
+          if userData.userName == userName && userData.password == password {
+                self.presenter?.confirmedUserLoginInfomation(userData: userData)
             }
             else {
-                self.presenter?.confirmedUserLoginInfomation(result: .failure(Error.self as! Error))
+                self.presenter?.failureConfirmedUserLoginInfomation()
             }
         }
     }
