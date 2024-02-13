@@ -18,7 +18,6 @@
 		08537B6F2B79068700F42C9A /* VIPER_ApplicationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B6E2B79068700F42C9A /* VIPER_ApplicationUITestsLaunchTests.swift */; };
 		08537B7C2B7916E000F42C9A /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B7B2B7916E000F42C9A /* TodoData.swift */; };
 		08537B7E2B7917BD00F42C9A /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B7D2B7917BD00F42C9A /* Protocols.swift */; };
-		08537B812B79201F00F42C9A /* TodoListViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B802B79201F00F42C9A /* TodoListViewData.swift */; };
 		08537B862B79241A00F42C9A /* ToDoListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B852B79241A00F42C9A /* ToDoListInteractor.swift */; };
 		08537B882B79254C00F42C9A /* ToDoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B872B79254C00F42C9A /* ToDoStore.swift */; };
 		08537B8A2B79279D00F42C9A /* TodoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537B892B79279D00F42C9A /* TodoListPresenter.swift */; };
@@ -32,6 +31,14 @@
 		08537BA22B79B15D00F42C9A /* TodoDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BA12B79B15D00F42C9A /* TodoDetailPresenter.swift */; };
 		08537BA52B79E16E00F42C9A /* TodoDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BA42B79E16E00F42C9A /* TodoDetailRouter.swift */; };
 		08537BA82B79E6BF00F42C9A /* TransitionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BA72B79E6BF00F42C9A /* TransitionProtocol.swift */; };
+		08537BAA2B7B02F800F42C9A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BA92B7B02F800F42C9A /* LoginViewController.swift */; };
+		08537BAE2B7B032E00F42C9A /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08537BAD2B7B032E00F42C9A /* LoginView.storyboard */; };
+		08537BB02B7B033C00F42C9A /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BAF2B7B033C00F42C9A /* LoginProtocol.swift */; };
+		08537BB22B7B035300F42C9A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BB12B7B035300F42C9A /* LoginRouter.swift */; };
+		08537BB42B7B036000F42C9A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BB32B7B036000F42C9A /* LoginInteractor.swift */; };
+		08537BB62B7B036B00F42C9A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BB52B7B036B00F42C9A /* LoginPresenter.swift */; };
+		08537BB82B7B0AD100F42C9A /* ResistedUserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BB72B7B0AD000F42C9A /* ResistedUserDataStore.swift */; };
+		08537BBB2B7B0AF800F42C9A /* LoginUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537BBA2B7B0AF800F42C9A /* LoginUserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +74,6 @@
 		08537B6E2B79068700F42C9A /* VIPER_ApplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPER_ApplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		08537B7B2B7916E000F42C9A /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 		08537B7D2B7917BD00F42C9A /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		08537B802B79201F00F42C9A /* TodoListViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewData.swift; sourceTree = "<group>"; };
 		08537B852B79241A00F42C9A /* ToDoListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListInteractor.swift; sourceTree = "<group>"; };
 		08537B872B79254C00F42C9A /* ToDoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoStore.swift; sourceTree = "<group>"; };
 		08537B892B79279D00F42C9A /* TodoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListPresenter.swift; sourceTree = "<group>"; };
@@ -81,6 +87,14 @@
 		08537BA12B79B15D00F42C9A /* TodoDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailPresenter.swift; sourceTree = "<group>"; };
 		08537BA42B79E16E00F42C9A /* TodoDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetailRouter.swift; sourceTree = "<group>"; };
 		08537BA72B79E6BF00F42C9A /* TransitionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionProtocol.swift; sourceTree = "<group>"; };
+		08537BA92B7B02F800F42C9A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		08537BAD2B7B032E00F42C9A /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
+		08537BAF2B7B033C00F42C9A /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		08537BB12B7B035300F42C9A /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		08537BB32B7B036000F42C9A /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		08537BB52B7B036B00F42C9A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		08537BB72B7B0AD000F42C9A /* ResistedUserDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResistedUserDataStore.swift; sourceTree = "<group>"; };
+		08537BBA2B7B0AF800F42C9A /* LoginUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,14 +147,16 @@
 			children = (
 				08537B4B2B79068400F42C9A /* AppDelegate.swift */,
 				08537B4D2B79068400F42C9A /* SceneDelegate.swift */,
-				08537B872B79254C00F42C9A /* ToDoStore.swift */,
+				08537BB92B7B0AE100F42C9A /* Store */,
 				08537B7B2B7916E000F42C9A /* TodoData.swift */,
+				08537BBA2B7B0AF800F42C9A /* LoginUserData.swift */,
 				08537B912B79A53F00F42C9A /* TodoDetail */,
 				08537B832B7923A800F42C9A /* ToDoList */,
 				08537B542B79068700F42C9A /* Assets.xcassets */,
 				08537B562B79068700F42C9A /* LaunchScreen.storyboard */,
 				08537B592B79068700F42C9A /* Info.plist */,
 				08537BA72B79E6BF00F42C9A /* TransitionProtocol.swift */,
+				08537BAB2B7B02FD00F42C9A /* Login */,
 			);
 			path = VIPER_Application;
 			sourceTree = "<group>";
@@ -162,14 +178,6 @@
 			path = VIPER_ApplicationUITests;
 			sourceTree = "<group>";
 		};
-		08537B7F2B791FFE00F42C9A /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				08537B802B79201F00F42C9A /* TodoListViewData.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		08537B822B79210300F42C9A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				08537B842B7923F400F42C9A /* View */,
-				08537B7F2B791FFE00F42C9A /* Entities */,
 				08537B822B79210300F42C9A /* Protocols */,
 				08537B992B79AC0900F42C9A /* Interactor */,
 				08537B9A2B79AC1400F42C9A /* Presenter */,
@@ -285,6 +292,36 @@
 				08537BA42B79E16E00F42C9A /* TodoDetailRouter.swift */,
 			);
 			name = Router;
+			sourceTree = "<group>";
+		};
+		08537BAB2B7B02FD00F42C9A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				08537BAC2B7B031200F42C9A /* View */,
+				08537BAF2B7B033C00F42C9A /* LoginProtocol.swift */,
+				08537BB12B7B035300F42C9A /* LoginRouter.swift */,
+				08537BB32B7B036000F42C9A /* LoginInteractor.swift */,
+				08537BB52B7B036B00F42C9A /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		08537BAC2B7B031200F42C9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				08537BA92B7B02F800F42C9A /* LoginViewController.swift */,
+				08537BAD2B7B032E00F42C9A /* LoginView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		08537BB92B7B0AE100F42C9A /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				08537B872B79254C00F42C9A /* ToDoStore.swift */,
+				08537BB72B7B0AD000F42C9A /* ResistedUserDataStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +432,7 @@
 				08537B582B79068700F42C9A /* LaunchScreen.storyboard in Resources */,
 				08537B552B79068700F42C9A /* Assets.xcassets in Resources */,
 				08537B532B79068400F42C9A /* Main.storyboard in Resources */,
+				08537BAE2B7B032E00F42C9A /* LoginView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,22 +457,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08537B812B79201F00F42C9A /* TodoListViewData.swift in Sources */,
+				08537BBB2B7B0AF800F42C9A /* LoginUserData.swift in Sources */,
 				08537B8C2B792F3B00F42C9A /* TableListviewCell.swift in Sources */,
+				08537BB62B7B036B00F42C9A /* LoginPresenter.swift in Sources */,
 				08537B7E2B7917BD00F42C9A /* Protocols.swift in Sources */,
 				08537B862B79241A00F42C9A /* ToDoListInteractor.swift in Sources */,
+				08537BAA2B7B02F800F42C9A /* LoginViewController.swift in Sources */,
+				08537BB22B7B035300F42C9A /* LoginRouter.swift in Sources */,
 				08537B8A2B79279D00F42C9A /* TodoListPresenter.swift in Sources */,
 				08537B902B79A53B00F42C9A /* TodoDetailViewController.swift in Sources */,
 				08537BA82B79E6BF00F42C9A /* TransitionProtocol.swift in Sources */,
+				08537BB82B7B0AD100F42C9A /* ResistedUserDataStore.swift in Sources */,
 				08537B7C2B7916E000F42C9A /* TodoData.swift in Sources */,
 				08537B502B79068400F42C9A /* ViewController.swift in Sources */,
 				08537B932B79A58700F42C9A /* TodoDetailProtocols.swift in Sources */,
+				08537BB42B7B036000F42C9A /* LoginInteractor.swift in Sources */,
 				08537B882B79254C00F42C9A /* ToDoStore.swift in Sources */,
 				08537B8E2B79399E00F42C9A /* TodoListRouter.swift in Sources */,
 				08537B9F2B79AC5F00F42C9A /* TodoDetailInteractor.swift in Sources */,
 				08537BA22B79B15D00F42C9A /* TodoDetailPresenter.swift in Sources */,
 				08537B982B79A72800F42C9A /* TodoDetailViewData.swift in Sources */,
 				08537BA52B79E16E00F42C9A /* TodoDetailRouter.swift in Sources */,
+				08537BB02B7B033C00F42C9A /* LoginProtocol.swift in Sources */,
 				08537B4C2B79068400F42C9A /* AppDelegate.swift in Sources */,
 				08537B4E2B79068400F42C9A /* SceneDelegate.swift in Sources */,
 			);
