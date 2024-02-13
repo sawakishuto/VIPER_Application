@@ -147,17 +147,17 @@
 		08537B4A2B79068400F42C9A /* VIPER_Application */ = {
 			isa = PBXGroup;
 			children = (
+				08537B592B79068700F42C9A /* Info.plist */,
 				08537B4B2B79068400F42C9A /* AppDelegate.swift */,
 				08537B4D2B79068400F42C9A /* SceneDelegate.swift */,
-				08537BB92B7B0AE100F42C9A /* Store */,
-				08537B7B2B7916E000F42C9A /* TodoData.swift */,
+				08537BA72B79E6BF00F42C9A /* TransitionProtocol.swift */,
 				08537BBA2B7B0AF800F42C9A /* LoginUserData.swift */,
-				08537B912B79A53F00F42C9A /* TodoDetail */,
-				08537B832B7923A800F42C9A /* ToDoList */,
+				08537B7B2B7916E000F42C9A /* TodoData.swift */,
 				08537B542B79068700F42C9A /* Assets.xcassets */,
 				08537B562B79068700F42C9A /* LaunchScreen.storyboard */,
-				08537B592B79068700F42C9A /* Info.plist */,
-				08537BA72B79E6BF00F42C9A /* TransitionProtocol.swift */,
+				08537BB92B7B0AE100F42C9A /* Store */,
+				08537B912B79A53F00F42C9A /* TodoDetail */,
+				08537B832B7923A800F42C9A /* ToDoList */,
 				08537BAB2B7B02FD00F42C9A /* Login */,
 			);
 			path = VIPER_Application;
