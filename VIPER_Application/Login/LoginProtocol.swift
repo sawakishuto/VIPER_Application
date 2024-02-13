@@ -22,7 +22,7 @@ protocol LoginInteractorInputProtocol {
     func comformLoginInformation(userName: String, password: Int)
 }
 protocol LoginInteractorOutputProtocol {
-    func ViewWillLoad()
+    func confirmedUserLoginInfomation(result: Result<LoginUserData, Error>)
 }
 protocol LoginRouterProtocol {
     var view: LoginViewControllerProtocol? {get set}
