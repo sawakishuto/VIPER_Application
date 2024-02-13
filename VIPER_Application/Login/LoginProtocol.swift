@@ -6,29 +6,30 @@
 //
 
 import Foundation
+import UIKit
 
 protocol LoginViewControllerProtocol: TransitionProtocol {
     var presenter: LoginPresenterProtocol? {get set}
     func showLogin()
     func failureUserLogin(message: String)
 }
-protocol LoginPresenterProtocol {
+protocol LoginPresenterProtocol: AnyObject {
     var view: LoginViewControllerProtocol? {get set}
     var interactor: LoginInteractorInputProtocol? {get set}
     var router: LoginRouterProtocol? {get set}
     func startLoginComfirm(userName: String, password: Int)
 }
-protocol LoginInteractorInputProtocol {
+protocol LoginInteractorInputProtocol: AnyObject {
     var presenter: LoginInteractorOutputProtocol? {get set}
     func comformLoginInformation(userName: String, password: Int)
 }
-protocol LoginInteractorOutputProtocol {
+protocol LoginInteractorOutputProtocol: AnyObject {
     func confirmedUserLoginInfomation(userData: LoginUserData)
     func failureConfirmedUserLoginInfomation(message: String)
 }
-protocol LoginRouterProtocol {
+protocol LoginRouterProtocol:AnyObject {
     var view: LoginViewControllerProtocol? {get set}
-    func assembleModules()
+    func assembleModules() -> UIViewController
     func transitionTodoList()
 }
 

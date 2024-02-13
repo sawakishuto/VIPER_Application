@@ -9,7 +9,7 @@ import Foundation
 
 
 final class LoginInteractor {
-    var presenter: LoginInteractorOutputProtocol?
+    weak var presenter: LoginInteractorOutputProtocol?
 }
 extension LoginInteractor: LoginInteractorInputProtocol {
     func comformLoginInformation(userName: String, password: Int) {

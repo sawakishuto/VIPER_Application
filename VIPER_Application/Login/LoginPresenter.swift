@@ -9,7 +9,7 @@ import Foundation
 
 
 final class LoginPresenter {
-    var view: LoginViewControllerProtocol?
+    weak var view: LoginViewControllerProtocol?
     var interactor: LoginInteractorInputProtocol?
     var router: LoginRouterProtocol?
 }
