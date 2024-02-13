@@ -19,7 +19,7 @@ extension LoginInteractor: LoginInteractorInputProtocol {
                 self.presenter?.confirmedUserLoginInfomation(userData: userData)
             }
             else {
-                self.presenter?.failureConfirmedUserLoginInfomation()
+                self.presenter?.failureConfirmedUserLoginInfomation(message: "ユーザーネームまたはパスワードが違います")
             }
         }
     }

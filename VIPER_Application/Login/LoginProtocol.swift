@@ -10,6 +10,7 @@ import Foundation
 protocol LoginViewControllerProtocol: TransitionProtocol {
     var presenter: LoginPresenterProtocol? {get set}
     func showLogin()
+    func failureUserLogin(message: String)
 }
 protocol LoginPresenterProtocol {
     var view: LoginViewControllerProtocol? {get set}
@@ -23,10 +24,11 @@ protocol LoginInteractorInputProtocol {
 }
 protocol LoginInteractorOutputProtocol {
     func confirmedUserLoginInfomation(userData: LoginUserData)
-    func failureConfirmedUserLoginInfomation()
+    func failureConfirmedUserLoginInfomation(message: String)
 }
 protocol LoginRouterProtocol {
     var view: LoginViewControllerProtocol? {get set}
     func assembleModules()
+    func transitionTodoList()
 }
 
