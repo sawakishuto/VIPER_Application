@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+final class LoginInteractor {
+    var presenter: LoginInteractorOutputProtocol?
+}
+extension LoginInteractor: LoginInteractorInputProtocol {
+    func comformLoginInformation(userName: String, password: Int) {
+        let userData = ResistedUserDataStore.shared.LoginUser
+        
+    }
+}
