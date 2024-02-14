@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+protocol addTodoViewControllerProtocol {
+
+}
+
+protocol addTodoInteractorInput {
+
+}
+
+protocol addTodoInteractorOutput {
+
+}
+protocol addTodoPresenterProtocol {
+
+}
+protocol addTodoRouterProtocol {
+
+}
+
