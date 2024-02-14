@@ -40,8 +40,7 @@ class AddTodoViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(datePiker.snp.bottom).offset(30)
         }
-        }
-
+    }
 
     let datePiker: UIDatePicker = {
         let datepiker = UIDatePicker()
